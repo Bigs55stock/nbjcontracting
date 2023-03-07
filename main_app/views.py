@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import Customer
 from .models import Projects
+from .models import Manywork
+from django.views.generic.edit import CreateView
 
 
 
@@ -31,3 +33,9 @@ class ProjectsList(TemplateView):
         context = super().get_context_data(**kwargs)
         context["projects"] = Projects.objects.all() 
         return context
+
+class CustomerCreate(CreateView):
+    model = Customer
+    fields = ['name', 'number', 'email', 'Inquiries']
+    template_name = "customer_create.html"
+    success_url = "/customers/"
