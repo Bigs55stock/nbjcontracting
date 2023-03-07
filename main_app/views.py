@@ -38,4 +38,4 @@ class CustomerCreate(CreateView):
     model = Customer
     fields = ['name', 'number', 'email', 'Inquiries']
     template_name = "customer_create.html"
-    success_url = "/customers/"
+    success_url = "/projects/"
