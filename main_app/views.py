@@ -3,6 +3,7 @@ from django.views import View
 from django.http import HttpResponse 
 from django.views.generic.base import TemplateView
 from .models import Customer
+from .models import Projects
 
 
 
@@ -22,3 +23,11 @@ class Home(TemplateView):
 
 class About(TemplateView):
     template_name = "about.html"
+
+class ProjectsList(TemplateView):
+    template_name = "projects_list.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["projects"] = Projects.objects.all() 
+        return context

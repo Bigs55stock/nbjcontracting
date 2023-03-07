@@ -18,15 +18,22 @@ class Customer(models.Model):
 
 class Projects(models.Model):
 
-    brickwork = models.TextField(max_length=500)
-    concrete= models.TextField(max_length=500)
-    waterproofing = models.TextField(max_length=500)
-    roofing = models.TextField(max_length=500)
-    stucco = models.TextField(max_length=500)
-
+    typeofwork = models.TextField(max_length=500)
+    img= models.TextField(max_length=500)
    
     
     def __str__(self):
-        return self.name
+        return self.typeofwork
 
+
+class Manywork(models.Model):
+
+    name = models.TextField(max_length=500)
+    img = models.TextField(max_length=500)
+    desc= models.TextField(max_length=500)
+    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    
+    
+    def __str__(self):
+        return self.name
   
