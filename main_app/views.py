@@ -6,6 +6,9 @@ from .models import Customer
 from .models import Projects
 from .models import Manywork
 from django.views.generic.edit import CreateView
+from django.views.generic import DetailView
+from .forms import Customerform 
+from django.http import HttpResponseRedirect
 
 
 
@@ -34,8 +37,24 @@ class ProjectsList(TemplateView):
         context["projects"] = Projects.objects.all() 
         return context
 
-class CustomerCreate(CreateView):
-    model = Customer
-    fields = ['name', 'number', 'email', 'Inquiries']
-    template_name = "customer_create.html"
-    success_url = "/projects/"
+# class CustomerCreate(request):
+#     return render(request, 'templates/customer_create.html', {})
+    
+
+
+class ManyworkDetail(DetailView):
+    model = Manywork
+    template_name = "manywork_detail.html"
+
+def CustomerCreate(request):
+    submitted = False
+    if request.method == "POST":
+        form = Customerform(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/customers/new/?submitted=True')
+    else:
+        form = Customerform
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'customer_create.html', {'form':form, 'submitted':submitted})
