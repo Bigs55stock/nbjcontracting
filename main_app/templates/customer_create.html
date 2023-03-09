@@ -1,25 +1,93 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
-<center>
-<h1>Contact us Here</h1>
-<br/><br/>
-{% if submitted %}
-    Thank You, Your infomation has been submitted sucessfully. We will contact you shortly.
-{% else %}
 
 
-    <form action= "" method=POST>
-    <!-- Security Feature  -->
-    {% csrf_token %} 
-    <!--  Generate inputs  -->
-    {{form.as_p}} 
-    <!--  Submit form  -->
-    <input type="submit" value="Submit" class="button is-success" />
-    </form>
-{% endif %}
-</center>
+<section class="ftco-section">
+    <div class="container">
+        <h2 class= "services">Contact us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                
+                                <p class="mb-4">Call/Text or Email us now for a free estimate!</p>
+                          
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="text">
+                                    <p><span>Address:</span> </p>
+                                  </div>
+                              </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="text">
+                                        <p><span>Phone:</span></p>
+                                    
+                                  </div>
+                              </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="text">
+                                        <p><span>Email:</span>NBJContracting<br/>@gmail.com </p>
+                                  </div>
+                              </div>
+                                    </div>
+                                </div>
+                                <form action ='' method="post" id="contactForm" name="contactForm" class="contactForm">
+                                    {% csrf_token %}
+                                    {% comment %} {{ form }} {% endcomment %}
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" required id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12"> 
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="number" required id="number" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" required id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" required id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Submit" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-5 img" style="background-image: url(https://i.imgur.com/KxuNnNX.png);" >
+                  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-
-
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
 {% endblock %}

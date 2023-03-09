@@ -4,8 +4,8 @@
 
 <div class="gallery">
   {% for project in projects %}
-  <a href="">
-    <div class="card">
+
+  <a href="{% url "manywork_detail" project.pk %}"> butttonnnnn </a>
       <div class="card-image">
         <figure class="image is-square">
           <img src="{{project.img}}" alt="{{project.name}}" />
