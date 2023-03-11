@@ -1,17 +1,17 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: white;
+    color: black;
     min-height: 100vh;
 }
 
 h1,
 h2,
 h3 {
-    color: #ffffff;
+    color: black;
 }
 
 .title {
-    color: #ffffff;
+    color: black;
 }
 
 .gallery {
