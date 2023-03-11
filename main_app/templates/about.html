@@ -9,5 +9,43 @@
     <body>
         {% extends 'base.html' %} {% block content %}
         <h1>NBJ About</h1>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-vcentered">
+                    <div class="column is-5">
+                        <figure class="image is-4by3">
+                            <img src="https://i.imgur.com/HZjjSGh.png?1" alt="Description">
+                        </figure>
+                    </div>
+                    <div class="column is-6 is-offset-1">
+                        <h1 class="title is-2">
+                            About us
+                        </h1>
+                        <h2 class="subtitle is-4">
+                            We are a construction company based in NYC.
+                        </h2>
+                        <br>
+                        <p class="has-text-centered">
+                            <a class="button is-medium is-info is-outlined" href="/projects">
+                                 See more
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a>And this is the bottom</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/bulma.js"></script>
         {% endblock %}
     </body>
