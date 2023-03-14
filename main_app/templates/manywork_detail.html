@@ -7,7 +7,9 @@
   {% for work in projects.work.all %}
   <p class="title is-4">{{work.name}}</p>
 
-  <img src="{{project.img}}" alt="{{project.name}}" class= "detailpic" />
+  <img src="{{work.img}}" alt="{{work.name}}" class= "detailpic" />
+
+  <h1>{{work.desc}}</h1>
 
   {% endfor %}
 
