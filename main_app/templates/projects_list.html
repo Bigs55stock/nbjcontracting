@@ -5,18 +5,20 @@
 <div class="gallery">
   {% for project in projects %}
 
-  <a href="{% url "manywork_detail" project.pk %}"> butttonnnnn </a>
-      <div class="card-image">
-        <figure class="image is-square">
-          <img src="{{project.img}}" alt="{{project.name}}" />
-        </figure>
-      </div>
-      <div class="card-header">
-        <p class="card-header-title">{{project.typeofwork}}</p>
-      </div>
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-square">
+        <img src="{{project.img}}" alt="{{project.name}}" />
+      </figure>
     </div>
-  </a>
-  {% endfor %}
+    <div class="card-header">
+      <p class="card-header-title">{{project.typeofwork}}</p>
+      <a href="{% url "manywork_detail" project.pk %}" class="button is-primary"> see more </a>
+    </div>
+  </div>
+</a>
+{% endfor %}
 </div>
+
 
 {% endblock %}
