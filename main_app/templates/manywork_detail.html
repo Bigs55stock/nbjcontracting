@@ -5,7 +5,7 @@
 {% block content %}
 {% for work in projects.work.all %}
 
-<h1>{{projects.typeofwork}}</h1>
+<p class="title is-2">{{projects.typeofwork}}</h1>
 <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
@@ -15,11 +15,11 @@
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="title is-4">{{work.name}}</p>
+        <p class="title is-3">{{work.name}}</p>
         <p class="subtitle is-6">Catagory: {{projects.typeofwork}}</p>
       </div>
     </div>
-    <h1>Description:</h1>
+    <p class="title is-6">Description:</h1>
     <div class="content">
       {{work.desc}}
     </div>
