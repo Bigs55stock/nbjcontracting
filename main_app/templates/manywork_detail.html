@@ -1,18 +1,29 @@
+
+
+
 {% extends 'base.html' %} 
 {% block content %}
-<div>
-  <h1>{{project.typeofwork}}</h1>
-  <p class="card-header-title">{{projects.typeofwork}}</p>
+{% for work in projects.work.all %}
 
-  {% for work in projects.work.all %}
-  <p class="title is-4">{{work.name}}</p>
-
-  <img src="{{work.img}}" alt="{{work.name}}" class= "detailpic" />
-
-  <h1>{{work.desc}}</h1>
-
+<h1>{{projects.typeofwork}}</h1>
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="{{work.img}}" alt="{{work.name}}">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{work.name}}</p>
+        <p class="subtitle is-6">Catagory: {{projects.typeofwork}}</p>
+      </div>
+    </div>
+    <h1>Description:</h1>
+    <div class="content">
+      {{work.desc}}
+    </div>
+  </div>
   {% endfor %}
-
 </div>
-
 {% endblock %}
