@@ -13,22 +13,14 @@ from .forms import ContactForm
 
 
 
-class Home(View):
-
-    def get(self, request):
-        return HttpResponse("NBJ Home")
-
-
-class About(View):
-
-    def get(self, request):
-        return HttpResponse("NBJ About")
-
 class Home(TemplateView):
     template_name = "home.html"
 
 class About(TemplateView):
     template_name = "about.html"
+    
+class Success(TemplateView):
+    template_name = "success.html"
 
 # class ProjectsList(TemplateView):
 #     template_name = "projects_list.html"
