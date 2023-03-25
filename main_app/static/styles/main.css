@@ -8252,7 +8252,7 @@ p {
     background: -ms-linear-gradient(-45deg, #7f279c 0%, #2e279d 100%);
     background: -webkit-linear-gradient(315deg, #7f279c 0%, #2e279d 100%);
     background: -o-linear-gradient(315deg, #7f279c 0%, #2e279d 100%);
-    background: linear-gradient(135deg, #7f279c 0%, #2e279d 100%);
+    background: linear-gradient(135deg, #a10e20 0%, #a10e20 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f279c', endColorstr='#2e279d', GradientType=1 ); }
     .contact-wrap h3 {
       color: #fff; }
@@ -8266,7 +8266,7 @@ p {
       left: 0;
       width: 60px;
       height: 3px;
-      background: #d62196;
+      background: #a10e20;
       content: ''; }
   
   .info-wrap .dbox {
@@ -8318,7 +8318,7 @@ p {
       -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.22) !important;
       box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.22) !important; }
     .btn.btn-primary {
-      background: #d62196 !important;
+      background: #00d1b2 !important;
       border-color: #d62196 !important;
       color: #fff; }
       .btn.btn-primary:hover, .btn.btn-primary:focus {
